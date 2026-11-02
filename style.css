@@ -1,0 +1,304 @@
+body {
+    margin: 0;
+    background-color: #f2f2f2;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow',sans-serif;
+}
+
+
+.nav-cont {
+    background-color: white;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.nav-liste {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 12px 24px;
+    overflow-x: auto;  
+}        
+
+.nav-lien {
+    display: inline-block;
+    padding: 7px 14px;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #0f0f0f;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;         
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.nav-lien:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #d0cfcf;
+}
+
+
+.nav-lien.actif {
+    background-color: #0f0f0f;
+    color: white;
+}
+
+
+    
+
+
+.presentation {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.image-presentation {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.texte-presentation {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.pied-page {
+    text-align: center;
+    padding: 20px;
+    color: #5b6b7b;
+}
+
+.histoire {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.histoire-image {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.histoire-titre {
+    margin: 0 0 6px;
+    color: #1f3a5f;
+}
+
+.histoire-sous-titre {
+    margin: 0 0 12px;
+    color: #f4f7fb;
+}
+
+.histoire-texte p {
+    margin: 0px;
+    line-height: 1.8;
+}
+
+
+
+@media (max-width: 700px) {
+    .histoire { flex-direction: column; }
+    .histoire-image { width: 100%; }
+}
+
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 24px auto 40px;
+    padding: 0 30px;
+}
+
+.galerie-item {
+    margin: 0;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+.galerie-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.galerie-image:hover {
+    transform: scale(1.05);
+}
+
+.galerie-legende {
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #fbfbfb;
+}
+
+
+.lightbox {
+    display: none;                       
+    position: fixed;
+    inset: 0;                            
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.lightbox.ouverte {
+    display: flex;                       
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 8px;
+}
+
+.lightbox-fermer {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 800px) {
+    .galerie { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+    .galerie { grid-template-columns: 1fr; }
+}
+
+
+.titre-page {
+    max-width: 1000px;
+    margin: 40px auto 0;
+    padding: 0 30px;
+    color: #0f0f0f;
+}
+
+.grille-sports {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 24px auto 40px;
+    padding: 0 30px;
+}
+
+.sport-carte {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+.sport-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.sport-contenu {
+    padding: 20px;
+}
+
+.sport-titre {
+    margin: 0 0 10px;
+    color: #1f3a5f;
+}
+
+.sport-texte {
+    margin: 0;
+    line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+    .grille-sports { grid-template-columns: 1fr; }
+}
+
+
+
+.galerie-message {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.galerie-message-titre {
+    margin: 0 0 12px;
+    color: #1f3a5f;
+}
+
+.galerie-message-texte {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+body {
+    background: linear-gradient(160deg, #2d0676 0%, #1813a3 55%, #441aaf 100%);
+    background-attachment: fixed;  
+    min-height: 100vh;
+}
+
+
+.titre-page {
+    color: white;
+}
+
+.pied-page {
+    color: #b9a9d6;
+}
+
+
+.nav-cont {
+    background-color:rgb(183, 206, 206);
+    border-bottom: 1px solid #e4e1e9;
+}
+
+.nav-lien {
+    background-color:White(235, 233, 241, 0.1);
+    color: white;
+}
+
+.nav-lien:hover {
+    background-color: rgba(255, 255, 255, 0.884);
+    color: #edeae9;
+}
+
+.nav-lien.actif {
+    background-color: #f5f6f6;  
+    color: white;
+}
